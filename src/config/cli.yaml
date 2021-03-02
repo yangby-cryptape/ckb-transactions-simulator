@@ -1,0 +1,35 @@
+name: CKB Transactions Simulator
+settings:
+  - SubcommandRequired
+subcommands:
+  - init:
+      about: Initialize the data directory.
+      args:
+        - data-dir:
+            help: The directory where to store the data.
+            long: data-dir
+            takes_value: true
+            required: true
+        - config:
+            help: The config file which includes the initialization parameters.
+            long: config
+            takes_value: true
+            required: true
+  - run:
+      about: Send CKB transactions continuously.
+      args:
+        - data-dir:
+            help: The directory where to store the data.
+            long: data-dir
+            takes_value: true
+            required: true
+        - jsonrpc-url:
+            help: The URL of CKB JSON-RPC.
+            long: jsonrpc-url
+            takes_value: true
+            required: true
+        - config:
+            help: The config file which includes the running parameters.
+            long: config
+            takes_value: true
+            required: true

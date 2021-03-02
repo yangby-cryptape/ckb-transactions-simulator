@@ -9,3 +9,29 @@ homepage = "https://github.com/yangby-cryptape/ckb-transactions-simulator"
 repository = "https://github.com/yangby-cryptape/ckb-transactions-simulator"
 
 [dependencies]
+ckb-types = "0.40.0"
+ckb-jsonrpc-types = "0.40.0"
+ckb-crypto = "0.40.0"
+ckb-hash = "0.40.0"
+secp256k1 = { version = "0.19.0", features = ["recovery"] }
+tiny-keccak = { version = "2.0.2", features = ["keccak"] }
+rand = "0.7.3"
+rand_distr = "0.3.0"
+anyhow = "1.0.38"
+thiserror = "1.0.24"
+log = "0.4.14"
+env_logger = "0.8.3"
+clap = { version = "2.33.3", features = ["yaml"] }
+parking_lot = "0.11.1"
+futures01 = { package = "futures", version = "0.1.31" }
+futures = { version = "0.3.13", features = ["compat"] }
+tokio01 = { package = "tokio", version = "0.1.22" }
+tokio = { version = "0.3.3", features = ["full"] }
+serde = { version = "1.0.123", features = ["derive"] }
+serde_json = "1.0.64"
+serde_yaml = "0.8.17"
+url = "2.2.1"
+rocksdb = "0.15.0"
+jsonrpc-core-client = { version = "15.1.0", features = ["http"] }
+jsonrpc-core = "15.1.0"
+jsonrpc-derive = "15.1.0"

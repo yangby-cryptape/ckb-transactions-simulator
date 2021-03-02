@@ -1,0 +1,37 @@
+# Collect available cells from this block and all blocks after this blocks from the JSON-RPC.
+start_block:
+  number: 1256000
+  hash: "0xa67aeff9e3a5978db1902c13a6a31bc9de517af4bd4c245aabd0036c02efc8ea"
+# Set the parameters for all kinds of lock scripts.
+lock_scripts:
+  secp256k1_blake160:
+    code_hash: '0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8'
+    hash_type: 'type'
+    cell_deps:
+    -
+      out_point:
+        tx_hash: '0xf8de3bb47d055cdf460d93a2a6e1b05f7432f9777c8c474abf4eec1d4aee5d37'
+        index: 0
+      dep_type: 'dep_group'
+  pwlock-k1-acpl:
+    code_hash: '0x58c5f491aba6d61678b7cf7edf4910b1f5e00ec0cde2f42e0abb4fd9aff25a63'
+    hash_type: 'type'
+    cell_deps:
+    -
+      out_point:
+        tx_hash: '0x57a62003daeab9d54aa29b944fc3b451213a5ebdf2e232216a3cfed0dde61b38'
+        index: 0
+      dep_type: 'code'
+    -
+      out_point:
+        tx_hash: '0xf8de3bb47d055cdf460d93a2a6e1b05f7432f9777c8c474abf4eec1d4aee5d37'
+        index: 0
+      dep_type: 'dep_group'
+# The secret keys for all inputs and outputs.
+accounts:
+-
+  secret_key: '0x1111111111111111111111111111111111111111111111111111111111111111'
+  lock_id: 'secp256k1_blake160'
+-
+  secret_key: '0x1111111111111111111111111111111111111111111111111111111111111111'
+  lock_id: 'pwlock-k1-acpl'

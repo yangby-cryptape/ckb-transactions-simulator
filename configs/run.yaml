@@ -1,0 +1,28 @@
+# To avoid forks.
+delay_blocks: 30
+generator:
+  # The maximum count of inputs.
+  inputs_limit: 12
+  # Use normal distribution to generate the inputs size
+  inputs_size_normal_distribution:
+    mean: 2
+    std_dev: 3
+  # The maximum count of outputs.
+  outputs_limit: 32
+  # The capacity of each new output (CKBytes).
+  output_capacity: 100
+  # The minimum capacity of outputs (CKBytes). For 1-in-1-out transactions.
+  output_min_capacity: 61
+  # The fee of each transaction (shannons).
+  tx_fee: 1000000
+  # The weights of lock scripts to choose them randomly.
+  locks_weights:
+    secp256k1_blake160: 1
+    pwlock-k1-acpl: 9
+client:
+  # Pause for several milliseconds if no new blocks and no unspent cells.
+  idle_interval: 5000
+  # Pause for several milliseconds after sent a transaction successfully.
+  success_interval: 500
+  # Pause for several milliseconds after sent a transaction unsuccessfully.
+  failure_interval: 3000
